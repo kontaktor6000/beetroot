@@ -1,13 +1,8 @@
 <?php
+session_start();
 
-
-echo 'helloeee';
-$a = 2;
-
-$b = 3;
-
-$sum = $a + $b;
-
+echo 'Welcome home, <strong>' . $_SESSION['userName'] . '</strong><br>';
+echo 'Вы аторизовывались <strong>' . $_SESSION['countEnter'] . '</strong> раз.<br>';
 
 
 

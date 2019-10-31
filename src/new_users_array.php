@@ -8,22 +8,22 @@
    $arrayReversUsers = [];
    $cnt = count($users);
    foreach ($users as $key => $user) {
-		$arrayReversUsers[$cnt-1] = $user; 
-		$cnt--;
-	}
-	
-	for ($i = 0; $i < count($arrayReversUsers); $i++) {
-		$finallyArrayUsers[] = $arrayReversUsers[$i];
-	}
-	
-	foreach ($finallyArrayUsers as $key => $user) {
-		$finallyArrayUsers2[$user['id']] = $user;
-	}
-	
- 	echo '<pre>';
-	print_r($finallyArrayUsers2);
-	echo '</pre>'; 
-   
+        $arrayReversUsers[$cnt-1] = $user;
+        $cnt--;
+    }
+
+    for ($i = 0; $i < count($arrayReversUsers); $i++) {
+        $finallyArrayUsers[] = $arrayReversUsers[$i];
+    }
+
+    foreach ($finallyArrayUsers as $key => $user) {
+        $finallyArrayUsers2[$user['id']] = $user;
+    }
+
+    echo '<pre>';
+    print_r($finallyArrayUsers2);
+    echo '</pre>';
+
    
    
    
