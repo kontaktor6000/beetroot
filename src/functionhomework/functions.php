@@ -3,7 +3,7 @@ function getUsersData($pathUsersFile = 'user_data.txt')
 {
     $usersDataList = file_get_contents($pathUsersFile);
 
-
+    $da=123123;
 
     $usersDataArray = explode(PHP_EOL, $usersDataList);
     $userData = [];
