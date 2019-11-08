@@ -1,15 +1,5 @@
 <?php
-function getUsersData($pathUsersFile = 'user_data.txt')
-{
-    $usersDataList = file_get_contents($pathUsersFile);
 
-    $usersDataArray = explode(PHP_EOL, $usersDataList);
-    $userData = [];
-    foreach ($usersDataArray as $userId => $user) {
-        $userData[$userId] = explode(' ', $user);
-    }
-    return $userData;
-}
 
 function validateAuth($login, $password) {
     $usersList = getUsersData();
