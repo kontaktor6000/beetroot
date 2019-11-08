@@ -3,6 +3,8 @@ function getUsersData($pathUsersFile = 'user_data.txt')
 {
     $usersDataList = file_get_contents($pathUsersFile);
 
+
+
     $usersDataArray = explode(PHP_EOL, $usersDataList);
     $userData = [];
     foreach ($usersDataArray as $userId => $user) {
