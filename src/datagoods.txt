@@ -1,0 +1,5 @@
+magnitofon 30.50 65
+telephone 600.00 300
+refrigerator 19500.00 6
+tv 7300.00 15
+socks 24.00 5605
