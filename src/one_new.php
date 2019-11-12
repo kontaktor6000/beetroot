@@ -1,7 +1,8 @@
 <?php
-    $newName = $_GET['newtitle'];
-    $newData = file_get_contents("data/$newName");
-    $newArray = unserialize($newData);
+session_start();
+$newName = $_GET['newtitle'];
+$newData = file_get_contents("data/$newName");
+$newArray = unserialize($newData);
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,7 +15,9 @@
 <h2><?=$newArray['title'];?></h2>
 <div><?=$newArray['content'];?></div>
 <hr>
-<p><a href="edit_new.php?editnew=<?=$newName;?>">Редактировать новость</a></p>
+<?php if ($_SESSION['user']): ?>
+    <p><a href="edit_new.php?editnew=<?=$newName;?>">Редактировать новость</a></p>
+<?php endif; ?>
 <p><a href="index.php">Вернуться на главную</a></p>
 
 
