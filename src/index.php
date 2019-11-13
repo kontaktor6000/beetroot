@@ -22,10 +22,6 @@ $news = scandir('data/');
 <button><a href="add_new.php">Добавить новость</a></button>
 <hr>
 
-<?php
-//prettyPrint($_SESSION);
-?>
-
 <?php if ($_SESSION['user']): ?>
     <form action="logout.php">
         <button type="submit">Выйти</button>

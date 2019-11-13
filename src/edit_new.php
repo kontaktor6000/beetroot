@@ -15,14 +15,11 @@ if (count($_POST) > 0) {
         //echo 'delete';
         //unlink('data/' . $data['id'] . '__' . $data['title'] . '.txt');
         unlink('data/' . $editName);
-        header("Location: index.php");
-    }
+        header("Location: index.php");    }
 
 } else {
     $editName = trim($_GET['editnew']);
     $newDataEdit = unserialize(file_get_contents("data/$editName"));
-    //prettyPrint($newDataEdit);
-    //unlink('data/' . $editName);
 }
 ?>
 <!doctype html>

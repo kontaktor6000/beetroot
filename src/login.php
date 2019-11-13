@@ -4,8 +4,7 @@ require_once 'functions.php';
 if (count($_POST) > 0) {
     $login = trim($_POST['login']);
     $password = trim($_POST['password']);
-    $_SESSION['user'] = validateAuth($login, $password);
-    //print_r($_SESSION['user']);
+    $_SESSION['user'] = validateAuth($login, $password, 'users_data.txt');
     if ($_SESSION['user']) {
         header("Location: index.php");die;
     }
